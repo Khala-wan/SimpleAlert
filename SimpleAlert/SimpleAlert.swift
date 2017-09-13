@@ -105,6 +105,7 @@ open class AlertController: UIViewController {
         self.init()
         self.customView = view
         self.preferredStyle = style
+        
     }
     
     public required init?(coder aDecoder: NSCoder) {
@@ -134,6 +135,8 @@ open class AlertController: UIViewController {
         cancelButtonView.clipsToBounds = true
         
         displayTargetView = contentView
+        containerView.layer.cornerRadius = 8
+        containerView.layer.masksToBounds = true
     }
     
     open override func viewWillAppear(_ animated: Bool) {
@@ -209,7 +212,7 @@ open class AlertController: UIViewController {
             let contentHeight = cancelButtonViewHeightConstraint.constant + mainViewHeightConstraint.constant + buttonViewHeightConstraint.constant + buttonViewSpaceConstraint.constant
             coverViewHeightConstraint.constant = contentHeight + marginInsets.top + marginInsets.bottom
         }
-        buttonViewHeightConstraint.constant += 20
+        buttonViewHeightConstraint.constant += 30
         view.layoutSubviews()
     }
     
@@ -239,10 +242,10 @@ open class AlertController: UIViewController {
     /** override if needed */
     open func loadButton() -> UIButton {
         let button = UIButton(type: .system)
-//        let borderView = UIView(frame: CGRect(x: 0, y: -0.5, width: 0, height: 0.5))
-//        borderView.backgroundColor = UIColor.lightGray
-//        borderView.autoresizingMask = .flexibleWidth
-//        button.addSubview(borderView)
+        //        let borderView = UIView(frame: CGRect(x: 0, y: -0.5, width: 0, height: 0.5))
+        //        borderView.backgroundColor = UIColor.lightGray
+        //        borderView.autoresizingMask = .flexibleWidth
+        //        button.addSubview(borderView)
         
         return button
     }
@@ -476,7 +479,7 @@ private extension AlertController {
             action.handler?(action)
         }
     }
-
+    
     func dismiss(withCompletion block: @escaping () -> () = {}) {
         dismiss(animated: true) {
             block()
@@ -552,13 +555,13 @@ extension AlertController: UIViewControllerAnimatedTransitioning {
         toView.frame = container.bounds
         toView.transform = fromView.transform.concatenating(CGAffineTransform(scaleX: 1.2, y: 1.2))
         coverView.addSubview(toView)
-
+        
         transitionCoverView = coverView
-
+        
         animation({
             toView.transform = fromView.transform
             coverView.alpha = 1
-            }, completion: completion)
+        }, completion: completion)
     }
     
     func dismissAnimationForAlert(_ container: UIView, toView: UIView, fromView: UIView, completion: @escaping (Bool) -> Void) {
@@ -567,7 +570,7 @@ extension AlertController: UIViewControllerAnimatedTransitioning {
         animation({
             self.transitionCoverView?.alpha = 0
             self.transitionCoverView = nil
-            }, completion: completion)
+        }, completion: completion)
     }
     
     func presentAnimationForActionSheet(_ container: UIView, toView: UIView, fromView: UIView, completion: @escaping (Bool) -> Void) {
