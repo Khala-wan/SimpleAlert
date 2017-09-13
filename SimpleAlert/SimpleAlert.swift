@@ -239,10 +239,10 @@ open class AlertController: UIViewController {
     /** override if needed */
     open func loadButton() -> UIButton {
         let button = UIButton(type: .system)
-        let borderView = UIView(frame: CGRect(x: 0, y: -0.5, width: 0, height: 0.5))
-        borderView.backgroundColor = UIColor.lightGray
-        borderView.autoresizingMask = .flexibleWidth
-        button.addSubview(borderView)
+//        let borderView = UIView(frame: CGRect(x: 0, y: -0.5, width: 0, height: 0.5))
+//        borderView.backgroundColor = UIColor.lightGray
+//        borderView.autoresizingMask = .flexibleWidth
+//        button.addSubview(borderView)
         
         return button
     }
@@ -373,8 +373,8 @@ private extension AlertController {
         }
         
         if let targetView = displayTargetView {
-            mainViewHeightConstraint.constant = targetView.bounds.height
-            mainView.frame.size.height = targetView.bounds.height
+            mainViewHeightConstraint.constant = targetView.bounds.height + 20
+            mainView.frame.size.height = targetView.bounds.height + 20
             mainView.addSubview(targetView)
         }
     }
@@ -430,14 +430,11 @@ private extension AlertController {
     }
     
     func buttonSizeToFitForHorizontal(_ button: UIButton, index: Int) {
-        button.frame.size.width = containerViewWidthConstraint.constant / 2
-        button.frame.origin.x = button.bounds.width * CGFloat(index)
-        
-        if index != 0 {
-            let borderView = UIView(frame: CGRect(x: 0, y: 0, width: 0.5, height: button.bounds.height))
-            borderView.backgroundColor = UIColor.lightGray
-            borderView.autoresizingMask = .flexibleHeight
-            button.addSubview(borderView)
+        button.frame.size.width = 118
+        if index == 0{
+            button.frame.origin.x = containerViewWidthConstraint.constant / 2 - 138
+        }else{
+            button.frame.origin.x = containerViewWidthConstraint.constant / 2 + 20
         }
     }
     
