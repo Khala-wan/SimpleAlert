@@ -209,7 +209,7 @@ open class AlertController: UIViewController {
             let contentHeight = cancelButtonViewHeightConstraint.constant + mainViewHeightConstraint.constant + buttonViewHeightConstraint.constant + buttonViewSpaceConstraint.constant
             coverViewHeightConstraint.constant = contentHeight + marginInsets.top + marginInsets.bottom
         }
-        
+        buttonViewHeightConstraint.constant += 20
         view.layoutSubviews()
     }
     
@@ -425,17 +425,17 @@ private extension AlertController {
     }
     
     func buttonSizeToFitForVertical(_ button: UIButton, index: Int) {
-        button.frame.size.width = containerViewWidthConstraint.constant
-        button.frame.origin.y = button.bounds.height * CGFloat(index)
+        button.frame.size.width = 108
+        button.frame.origin.x = containerViewWidthConstraint.constant / 2 - 54
     }
     
     func buttonSizeToFitForHorizontal(_ button: UIButton, index: Int) {
         button.backgroundColor = UIColor.red
-        button.frame.size.width = 118
+        button.frame.size.width = 108
         if index == 0{
-            button.frame.origin.x = containerViewWidthConstraint.constant / 2 - 138
+            button.frame.origin.x = containerViewWidthConstraint.constant / 2 - 118
         }else{
-            button.frame.origin.x = containerViewWidthConstraint.constant / 2 + 20
+            button.frame.origin.x = containerViewWidthConstraint.constant / 2 + 10
         }
     }
     
