@@ -137,6 +137,7 @@ open class AlertController: UIViewController {
         displayTargetView = contentView
         containerView.layer.cornerRadius = 8
         containerView.layer.masksToBounds = true
+        containerView.backgroundColor = UIColor.white
     }
     
     open override func viewWillAppear(_ animated: Bool) {
@@ -212,7 +213,7 @@ open class AlertController: UIViewController {
             let contentHeight = cancelButtonViewHeightConstraint.constant + mainViewHeightConstraint.constant + buttonViewHeightConstraint.constant + buttonViewSpaceConstraint.constant
             coverViewHeightConstraint.constant = contentHeight + marginInsets.top + marginInsets.bottom
         }
-        buttonViewHeightConstraint.constant += 30
+        buttonViewHeightConstraint.constant += 20
         view.layoutSubviews()
     }
     
@@ -376,8 +377,8 @@ private extension AlertController {
         }
         
         if let targetView = displayTargetView {
-            mainViewHeightConstraint.constant = targetView.bounds.height + 20
-            mainView.frame.size.height = targetView.bounds.height + 20
+            mainViewHeightConstraint.constant = targetView.bounds.height
+            mainView.frame.size.height = targetView.bounds.height
             mainView.addSubview(targetView)
         }
     }
