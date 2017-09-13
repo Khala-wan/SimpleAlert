@@ -1,8 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16G12b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -39,24 +42,31 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wnv-iy-aW0" userLabel="Background View" customClass="RespondView" customModule="SimpleAlert" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sDi-Gd-4ta" userLabel="Cover View">
+                            <rect key="frame" x="0.0" y="67" width="375" height="600"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="600" id="V6Y-18-kDG"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Su8-qx-f1b" userLabel="Margin View">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jHr-ee-3Le" userLabel="Container View">
+                                    <rect key="frame" x="37.5" y="304.5" width="300" height="58"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CjQ-Sr-lVk" userLabel="Base View">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="58"/>
                                             <subviews>
                                                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E9Y-Wv-Bl0" userLabel="Main View">
+                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="0.0"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" id="bZv-FF-68r"/>
                                                     </constraints>
                                                 </scrollView>
                                                 <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xF5-i7-QEX" userLabel="Button View">
+                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="48"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="48" id="Uog-n8-Fje"/>
                                                     </constraints>
@@ -65,7 +75,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="E9Y-Wv-Bl0" secondAttribute="trailing" id="FER-7f-XK4"/>
                                                 <constraint firstItem="E9Y-Wv-Bl0" firstAttribute="top" secondItem="CjQ-Sr-lVk" secondAttribute="top" id="LHd-yv-my3"/>
-                                                <constraint firstAttribute="bottom" secondItem="xF5-i7-QEX" secondAttribute="bottom" id="gNt-Tl-Lvy"/>
+                                                <constraint firstAttribute="bottom" secondItem="xF5-i7-QEX" secondAttribute="bottom" constant="10" id="gNt-Tl-Lvy"/>
                                                 <constraint firstItem="E9Y-Wv-Bl0" firstAttribute="leading" secondItem="CjQ-Sr-lVk" secondAttribute="leading" id="ohh-2Y-2sM"/>
                                                 <constraint firstItem="xF5-i7-QEX" firstAttribute="leading" secondItem="CjQ-Sr-lVk" secondAttribute="leading" id="qY1-R8-9Kf"/>
                                                 <constraint firstAttribute="trailing" secondItem="xF5-i7-QEX" secondAttribute="trailing" id="qYc-8J-ZdL"/>
@@ -73,6 +83,7 @@
                                             </constraints>
                                         </view>
                                         <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eju-qm-e5H" userLabel="Cancel Button View">
+                                            <rect key="frame" x="0.0" y="58" width="300" height="0.0"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" id="OLq-Ho-r54"/>
                                             </constraints>
@@ -121,16 +132,20 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nwo-PT-UIe" userLabel="Base View">
+                    <rect key="frame" x="20" y="20" width="220" height="62"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="220" translatesAutoresizingMaskIntoConstraints="NO" id="xau-wx-Wz2" userLabel="Title Label">
+                            <rect key="frame" x="0.0" y="0.0" width="220" height="19.5"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="220" translatesAutoresizingMaskIntoConstraints="NO" id="iC7-zZ-Tbm" userLabel="Message Label">
+                            <rect key="frame" x="0.0" y="29.5" width="220" height="14.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oUM-3e-1NC" userLabel="Text View">
+                            <rect key="frame" x="0.0" y="62" width="220" height="0.0"/>
                             <color key="backgroundColor" red="0.8862745098" green="0.8862745098" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" id="5g5-Eq-OMM"/>

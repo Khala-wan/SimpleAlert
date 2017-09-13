@@ -430,6 +430,7 @@ private extension AlertController {
     }
     
     func buttonSizeToFitForHorizontal(_ button: UIButton, index: Int) {
+        button.backgroundColor = UIColor.red
         button.frame.size.width = 118
         if index == 0{
             button.frame.origin.x = containerViewWidthConstraint.constant / 2 - 138
