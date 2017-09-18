@@ -429,17 +429,20 @@ private extension AlertController {
     }
     
     func buttonSizeToFitForVertical(_ button: UIButton, index: Int) {
-        button.frame.size.width = 108
-        button.frame.origin.x = containerViewWidthConstraint.constant / 2 - 54
+        let str:NSString = button.titleLabel!.text! as NSString
+        let size:CGSize = str.size(attributes: [NSFontAttributeName:button.titleLabel!.font])
+        button.frame.size.width = size.width + 50
+        button.center.x = containerViewWidthConstraint.constant / 2
     }
     
     func buttonSizeToFitForHorizontal(_ button: UIButton, index: Int) {
-        button.backgroundColor = UIColor.red
-        button.frame.size.width = 108
+        let str:NSString = button.titleLabel!.text! as NSString
+        let size:CGSize = str.size(attributes: [NSFontAttributeName:button.titleLabel!.font])
+        button.frame.size.width = size.width + 50
         if index == 0{
-            button.frame.origin.x = containerViewWidthConstraint.constant / 2 - 118
+            button.center.x = containerViewWidthConstraint.constant / 3 - 10
         }else{
-            button.frame.origin.x = containerViewWidthConstraint.constant / 2 + 10
+            button.center.x = containerViewWidthConstraint.constant / 3 * 2 - 10
         }
     }
     
