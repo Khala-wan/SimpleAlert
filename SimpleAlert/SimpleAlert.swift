@@ -442,7 +442,7 @@ private extension AlertController {
         if index == 0{
             button.center.x = containerViewWidthConstraint.constant / 3 - 10
         }else{
-            button.center.x = containerViewWidthConstraint.constant / 3 * 2 - 10
+            button.center.x = containerViewWidthConstraint.constant / 3 * 2 + 10
         }
     }
     
