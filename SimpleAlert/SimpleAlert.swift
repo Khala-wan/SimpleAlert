@@ -327,7 +327,7 @@ private extension AlertController {
         
         contentView?.titleLabel.text = title
         contentView?.messageLabel.text = message
-        
+        contentView?.messageLabel.textAlignment = contentView?.messageLabel.numberOfLines ?? 0 > 1 ? .left : .center
         if preferredStyle == .alert {
             for handler in textFieldHandlers {
                 if let textField = self.contentView?.addTextField() {
