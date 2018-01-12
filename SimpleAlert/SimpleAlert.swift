@@ -330,6 +330,8 @@ private extension AlertController {
         contentView?.layoutIfNeeded()
         
         contentView?.messageLabel.textAlignment = (contentView?.messageLabel.bounds.height ?? 0) / 12 > 1 ? .left : .center
+        
+        contentView?.messageLabel.text = "\(contentView!.messageLabel.bounds.height)"
         if preferredStyle == .alert {
             for handler in textFieldHandlers {
                 if let textField = self.contentView?.addTextField() {
