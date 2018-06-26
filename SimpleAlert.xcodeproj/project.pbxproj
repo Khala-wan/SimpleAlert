@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20451A0020E20EB200458B7B /* MyButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204519FF20E20EB200458B7B /* MyButtonView.swift */; };
 		C70C0C3E1A5FBEC8002BC071 /* SimpleAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = C70C0C3D1A5FBEC8002BC071 /* SimpleAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C70C0C441A5FBEC8002BC071 /* SimpleAlert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C70C0C381A5FBEC8002BC071 /* SimpleAlert.framework */; };
 		C70C0C4B1A5FBEC8002BC071 /* SimpleAlertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70C0C4A1A5FBEC8002BC071 /* SimpleAlertTests.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		204519FF20E20EB200458B7B /* MyButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButtonView.swift; sourceTree = "<group>"; };
 		C70C0C381A5FBEC8002BC071 /* SimpleAlert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SimpleAlert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C70C0C3C1A5FBEC8002BC071 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C70C0C3D1A5FBEC8002BC071 /* SimpleAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleAlert.h; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				C70C0C541A5FBFB4002BC071 /* SimpleAlert.swift */,
 				C70C0C551A5FBFB4002BC071 /* SimpleAlert.xib */,
 				C70C0C3B1A5FBEC8002BC071 /* Supporting Files */,
+				204519FF20E20EB200458B7B /* MyButtonView.swift */,
 			);
 			path = SimpleAlert;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 			files = (
 				C7453D611D868C30004E13BD /* AlertContentView.swift in Sources */,
 				C7453D5F1D868B96004E13BD /* AlertAction.swift in Sources */,
+				20451A0020E20EB200458B7B /* MyButtonView.swift in Sources */,
 				C70C0C561A5FBFB4002BC071 /* SimpleAlert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -27,7 +27,7 @@ open class AlertController: UIViewController {
     @IBOutlet fileprivate weak var marginView: UIView!
     @IBOutlet fileprivate weak var baseView: UIView!
     @IBOutlet fileprivate weak var mainView: UIScrollView!
-    @IBOutlet fileprivate weak var buttonView: UIScrollView!
+    @IBOutlet fileprivate weak var buttonView: MyButtonView!
     @IBOutlet fileprivate weak var cancelButtonView: UIScrollView!
     @IBOutlet fileprivate weak var contentView: AlertContentView?
     
